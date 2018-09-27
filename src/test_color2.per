@@ -1,0 +1,23 @@
+layout (text="color")
+  grid
+    {
+     <T                                                       >
+      [f00       |f01       |f02       |f03       |f04       ]
+      [f00       |f01       |f02       |f03       |f04       ]
+      [f00       |f01       |f02       |f03       |f04       ]
+      [f00       |f01       |f02       |f03       |f04       ]
+    }
+  end --grid
+end --layout
+
+attributes
+  edit f00 = formonly.p_start, title="start";
+  webcomponent f01 = formonly.p_alpha, componenttype="wc_colorfield", scrollbars=none, sizepolicy=fixed, stretch=x, title="Alpha";
+  webcomponent f02 = formonly.p_beta, componenttype="wc_colorfield", scrollbars=none, sizepolicy=fixed, stretch=x, title="Beta";
+  webcomponent f03 = formonly.p_gamma, componenttype="wc_colorfield", scrollbars=none, sizepolicy=fixed, stretch=x, title="Gamma";
+  textedit f04 = formonly.p_end, sizepolicy=fixed, stretch=x, title="end";
+end --attributes
+
+instructions
+  screen record color_arr(p_start thru p_end)
+end instructions

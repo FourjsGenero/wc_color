@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkspaceDatabase fileContentsEncoding="UTF-8" version="2.0">
+<File m="package-info" n="webcomponents/api/package-info.4gl" ts="20180921185413227"/>
+<File m="package-info" n="src/package-info.4gl" ts="20180921185413236"/>
+<File m="overview" n="overview.4gl" ts="20180921185413217"/>
+<File m="main" n="src/main.4gl" ts="20180921100002573">
+<Dep t="src/test_color.4gl"/>
+<Fct c="17" el="85" l="69" n="Run(p_request STRING)" t="F" v="pub">
+<Call c="12" l="76" n="Setup" t="F"/>
+<Call c="23" i="test_color" l="77" n="Test" p="src/test_color.4gl" t="F"/>
+<Call c="12" l="79" n="Setup" t="F"/>
+<Call c="23" i="test_color" l="80" n="Test_Array" p="src/test_color.4gl" t="F"/>
+<Call c="12" l="82" n="Menu" t="F"/>
+</Fct>
+<Fct c="18" el="63" l="51" n="Menu()" t="F">
+<Call c="12" l="57" n="Run" t="F"/>
+<Call c="12" l="59" n="Run" t="F"/>
+</Fct>
+<Fct c="18" el="45" l="44" n="Teardown()" t="F"/>
+<Fct c="18" el="38" l="31" n="Setup()" t="F"/>
+<Fct c="1" el="25" l="17" n="main()" t="F" v="pub">
+<Call c="8" l="23" n="Run" t="F"/>
+</Fct>
+</File>
+<File m="test_color" n="src/test_color.4gl" ts="20180921100002552">
+<Dep t="webcomponents/api/wc_color.4gl"/>
+<Fct c="17" el="120" l="75" n="Test_Array()" t="F" v="pub">
+<Call c="8" l="85" n="Setup" p="src/main.4gl" t="F"/>
+<Call c="30" i="wc_color" l="103" n="DialogBox" p="webcomponents/api/wc_color.4gl" t="F"/>
+<Call c="8" l="118" n="Teardown" p="src/main.4gl" t="F"/>
+</Fct>
+<Fct c="17" el="69" l="30" n="Test()" t="F" v="pub">
+<Call c="8" l="37" n="Setup" p="src/main.4gl" t="F"/>
+<Call c="30" i="wc_color" l="52" n="DialogBox" p="webcomponents/api/wc_color.4gl" t="F"/>
+<Call c="8" l="67" n="Teardown" p="src/main.4gl" t="F"/>
+</Fct>
+<Fct c="18" el="23" l="22" n="Teardown()" t="F"/>
+<Fct c="18" el="16" l="14" n="Setup()" t="F"/>
+</File>
+<File m="wc_color" n="webcomponents/api/wc_color.4gl" ts="20180921100002563">
+<Fct c="18" el="305" l="298" n="trace(p_data STRING)" t="F"/>
+<Fct c="17" el="280" l="275" n="Serialize(r_color RECORD)" t="F" v="pub">
+<Call c="8" l="277" n="trace" t="F"/>
+</Fct>
+<Fct c="17" el="257" l="253" n="Set(r_color RECORD)" t="F" v="pub">
+<Call c="78" l="255" n="Serialize" t="F"/>
+</Fct>
+<Fct c="17" el="237" l="226" n="Row_Set(p_json STRING)" t="F" v="pub"/>
+<Fct c="17" el="212" l="192" n="Palette(r_color RECORD,p_set STRING)" t="F" v="pub">
+<Call c="12" l="202" n="Row_Set" t="F"/>
+<Call c="12" l="203" n="Row_Set" t="F"/>
+<Call c="12" l="204" n="Row_Set" t="F"/>
+<Call c="12" l="205" n="Row_Set" t="F"/>
+<Call c="12" l="206" n="Row_Set" t="F"/>
+<Call c="12" l="207" n="Row_Set" t="F"/>
+<Call c="12" l="208" n="Row_Set" t="F"/>
+<Call c="12" l="209" n="Row_Set" t="F"/>
+</Fct>
+<Fct c="17" el="178" l="162" n="Html_Color(p_color STRING)" t="F" v="pub"/>
+<Fct c="17" el="156" l="139" n="Domain(p_domain STRING)" t="F" v="pub"/>
+<Fct c="17" el="124" l="86" n="DialogBox(p_title STRING,p_color STRING)" t="F" v="pub">
+<Call c="8" l="93" n="Create" t="F"/>
+<Call c="8" l="101" n="Palette" t="F"/>
+<Call c="8" l="107" n="Set" t="F"/>
+</Fct>
+<Fct c="17" el="78" l="56" n="Create(p_field STRING)" t="F" v="pub"/>
+<Fct c="17" el="40" l="36" n="Init()" t="F" v="pub"/>
+</File>
+</WorkspaceDatabase>

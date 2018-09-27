@@ -1,0 +1,20 @@
+Color is a set of widgets for color management, which needs to be cross
+platform and work within the realms of a web component.
+
+Restriction
+ a single color+picker widget (like a combobox or buttonedit)
+ can't work in a web component as overlay window would be required to
+ expand the pulldown for the selector, so the color display and selector
+ need to be separate
+
+color_selector
+ - run as a widget or in a dialog
+ - palatte and/or color wheel + value
+
+color widget
+ very simple widget - like edit but shows color and optional color code
+  (in hex, rgb, hsv)
+ data value = color
+ body background = color
+ onClick (or dblClick) - send action zoom
+

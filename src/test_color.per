@@ -1,0 +1,23 @@
+layout (text="color")
+  grid
+    {
+    start  [f00       ]
+    Alpha  [f01       ]
+    Beta   [f02       ]
+    Gamma  [f03       ]
+    end    [f04       ]
+    }
+  end --grid
+end --layout
+
+attributes
+  edit f00 = formonly.p_start;
+  webcomponent f01 = formonly.p_alpha, componenttype="wc_colorfield", scrollbars=none, sizepolicy=fixed, stretch=none;
+  webcomponent f02 = formonly.p_beta, componenttype="wc_colorfield", scrollbars=none, sizepolicy=fixed, stretch=none;
+  webcomponent f03 = formonly.p_gamma, componenttype="wc_colorfield", scrollbars=none, sizepolicy=fixed, stretch=none;
+  edit f04 = formonly.p_end;
+end --attributes
+
+instructions
+  screen record color_rec(p_start thru p_end)
+end instructions

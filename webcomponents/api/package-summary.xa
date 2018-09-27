@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='ASCII'?>
+<package name="api" qname="webcomponents.api" top="../../">
+  <api_synopsis>
+ api</api_synopsis>
+  <api_usage> BDL level API for color field and selector</api_usage>
+  <api_class name="wc_color" package="webcomponents.api" top="../../">
+    <TYPE name="tRow" type="DYNAMIC ARRAY OF STRING"/>
+    <TYPE name="tColorSelect" type="RECORD &lt;anonymous wc_color R2&gt;">
+      <RECORD>
+        <member name="field" type="STRING"/>
+        <member name="showFocus" type="BOOLEAN"/>
+        <member name="doc" type="RECORD &lt;anonymous wc_color R1&gt;">
+          <RECORD>
+            <member name="color" type="STRING"/>
+            <member name="flat" type="BOOLEAN"/>
+            <member name="showInput" type="BOOLEAN"/>
+            <member name="showPalette" type="BOOLEAN"/>
+            <member name="preferredFormat" type="STRING"/>
+            <member name="showButtons" type="BOOLEAN"/>
+            <member name="chooseText" type="STRING"/>
+            <member name="cancelText" type="STRING"/>
+            <member name="palette" type="DYNAMIC ARRAY WITH DIMENSION 2 OF STRING"/>
+          </RECORD>
+        </member>
+      </RECORD>
+    </TYPE>
+    <VARIABLE name="m_trace" type="BOOLEAN"/>
+    <function name="Serialize">
+      <api_synopsis> Serialize a color</api_synopsis>
+      <api_returnType>string</api_returnType>
+      <return>JSON string of tColorSelect structure</return>
+      <api_usage>
+        <pre> define r_color wc_color.tColorSelect,
+   p_json string
+ let p_json = wc_color.Serialize(r_color.*)</pre>
+      </api_usage>
+      <api_param name="r_color" type="wc_color.tColorSelect" type_name="tColorSelect">tColorSelect</api_param>
+      <RETURNS type="STRING"/>
+    </function>
+    <function name="Set">
+      <api_synopsis> Set initial contents of widget</api_synopsis>
+      <api_usage>
+        <pre> define r_color tColorSelect
+ let r_color.color = "#F0A0B0"
+ ...
+ call wc_color.Set(r_color.*)</pre>
+      </api_usage>
+      <api_param name="r_color" type="wc_color.tColorSelect" type_name="tColorSelect">Color instance</api_param>
+    </function>
+    <function name="Row_Set">
+      <api_synopsis> Set tRow of data from JSONArray string</api_synopsis>
+      <api_usage>
+        <pre> define p_json string, o_row tRow
+ call wc_color.Row_Set('["#FF0","#0F0","#00F"]') returning o_row</pre>
+      </api_usage>
+      <api_param name="p_json" type="STRING">JSON array of strings</api_param>
+      <RETURNS type="wc_color.tRow" type_name="tRow"/>
+    </function>
+    <function name="Palette">
+      <api_synopsis> Set Palette to a preconfgured set of colors</api_synopsis>
+      <api_usage>
+        <pre> define r_color tColorSelect
+ call wc_color.Palette(r_color.*, "default")</pre>
+      </api_usage>
+      <api_param name="r_color" type="wc_color.tColorSelect" type_name="tColorSelect">tColorSelect</api_param>
+      <api_param name="p_set" type="STRING">Palette set</api_param>
+    </function>
+    <function name="Html_Color">
+      <api_param name="p_color" type="STRING"/>
+      <RETURNS type="STRING"/>
+    </function>
+    <function name="Domain">
+      <api_synopsis> Returns list of possible values in a domain</api_synopsis>
+      <api_usage>
+        <pre> define a_list dynamic array of string
+ call wc_color.Domain("format") returning a_list</pre>
+      </api_usage>
+      <api_param name="p_domain" type="STRING">Domain to return possible values of</api_param>
+      <RETURNS type="DYNAMIC ARRAY OF STRING"/>
+    </function>
+    <function name="DialogBox">
+      <api_param name="p_title" type="STRING"/>
+      <api_param name="p_color" type="STRING"/>
+      <RETURNS type="STRING"/>
+    </function>
+    <function name="Create">
+      <api_synopsis> Creates a new instance of Color</api_synopsis>
+      <api_returnType>tColorSelect</api_returnType>
+      <return>Color record</return>
+      <api_usage>
+        <pre> define r_acc wc_color.tColorSelect
+ call wc_color.Create("formonly.p_color") returning r_color.*</pre>
+      </api_usage>
+      <api_param name="p_field" type="STRING">Form name of the field</api_param>
+      <RETURNS type="wc_color.tColorSelect" type_name="tColorSelect"/>
+    </function>
+    <function name="Init">
+      <api_synopsis> Initialize</api_synopsis>
+      <api_usage>
+        <pre> call wc_c3chart.Init()</pre>
+      </api_usage>
+    </function>
+  </api_class>
+</package>

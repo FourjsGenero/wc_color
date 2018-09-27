@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkspaceViewState version="1.0">
+  <ExpandedNodes>
+    <Node path="wc_color.4pw" type="pm/main-project"/>
+    <Node path="wc_color.4pw/Project" type="pm/group"/>
+    <Node path="wc_color.4pw/Project/Docs" type="pm/library"/>
+    <Node path="wc_color.4pw/Project/Docs/api" type="pm/virtual-folder"/>
+    <Node path="wc_color.4pw/Project/Docs/src" type="pm/virtual-folder"/>
+    <Node path="wc_color.4pw/Project/Resources" type="pm/library"/>
+    <Node path="wc_color.4pw/Project/test_color" type="pm/application"/>
+    <Node path="wc_color.4pw/Project/test_color/doc" type="pm/virtual-folder"/>
+    <Node path="wc_color.4pw/Project/test_color/src" type="pm/virtual-folder"/>
+    <Node path="wc_color.4pw/Project/WebComponents" type="pm/library"/>
+    <Node path="wc_color.4pw/Project/WebComponents/API" type="pm/virtual-folder"/>
+    <Node path="wc_color.4pw/Project/WebComponents/wc_colorfield" type="pm/virtual-folder"/>
+    <Node path="wc_color.4pw/Project/WebComponents/wc_colorselect" type="pm/virtual-folder"/>
+  </ExpandedNodes>
+  <OpenDocuments>
+    <Document container="true" filePath="src/test_color.per" locator="5:24" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+    <Document container="true" filePath="src/test_color.4gl" locator="7:1" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+    <Document container="true" filePath="webcomponents/wc_colorfield/wc_colorfield.html" locator="1:1" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+    <Document container="true" filePath="webcomponents/wc_colorfield/wc_colorfield.js" locator="38:36" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+    <Document container="true" filePath="webcomponents/wc_colorselect/wc_colorselect.html" locator="7:50" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+    <Document container="true" filePath="webcomponents/wc_colorselect/wc_colorselect.js" locator="101:33" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+    <Document container="true" filePath="webcomponents/api/wc_color.4gl" locator="16:30" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+    <Document container="true" filePath="webcomponents/api/wc_color.per" locator="1:1" module="mod-ce3">
+      <Data name="8" value="UTF-8"/>
+    </Document>
+  </OpenDocuments>
+  <CurrentDocument filePath="" module="mod-wp"/>
+</WorkspaceViewState>
