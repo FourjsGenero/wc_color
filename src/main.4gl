@@ -19,7 +19,7 @@ main
   define
     p_test string
 
-  let p_test = NVL(ARG_VAL(1), "menu")
+  let p_test = NVL(ARG_VAL(1), "color")
   call Run(p_test)
   
 end main
