@@ -4,7 +4,7 @@ GBC release 5.00.10 included a customisation for a color picker widget. https://
 
 Also see this Ask-Reuben article https://4js.com/ask-reuben-2/ig-261/ which uses the color picker widget built into most browsers via input type=color
 
-If you don't like either of those color picker widgets, consider usign what you can find here as a third alternative.
+If you don't like either of those color picker widgets, consider usign what you can find here as a third alternative via a Web Component rather than GBC Customisation 
 
 # wc_color
 Two color widgets
